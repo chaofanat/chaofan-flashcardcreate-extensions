@@ -1,0 +1,40 @@
+{
+    "name": "chaofan的闪卡生成插件", 
+    "description": "一个闪卡生成插件",
+    "version": "1.0", 
+    "manifest_version": 3, 
+    "icons": {
+      "16": "icon.PNG",
+      "48": "icon.PNG",
+      "128": "icon.PNG"
+    },
+   
+
+    "action": {
+      "default_popup": "popup.html", 
+      "default_title": "闪卡服务配置",
+      "default_icon": {
+        "16": "icon.PNG",
+        "48": "icon.PNG",
+        "128": "icon.PNG"
+      }
+    },
+   
+
+    "permissions": ["storage", "scripting", "contextMenus","cookies","activeTab","tabs","windows"],
+   
+
+    "host_permissions": ["<all_urls>"],
+
+    "background": {
+      "service_worker": "background.js"
+    },
+   
+
+    "content_scripts": [{
+      "js": ["content.js"],
+      "matches": ["<all_urls>"],
+
+      "run_at": "document_idle"
+    }]
+  }

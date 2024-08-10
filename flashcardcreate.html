@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flash Card Creator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, button {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="container">
+          <h3 class="mt-2 mb-1">创建闪卡</h3>
+          <form>
+            <!-- 卡片正面内容 -->
+            <div class="mb-1">
+              <label for="front_content" class="form-label">卡片正面内容</label>
+              <input type="text" class="form-control" id="front_content" name="front_content">
+            </div>
+            
+            <!-- 卡片反面内容 -->
+            <div class="mb-1">
+              <label for="back_content" class="form-label">卡片反面内容</label>
+              <textarea type="textarea" class="form-control" id="back_content" name="back_content"></textarea>
+            </div>
+            
+            <!-- 卡片所属卡片集 -->
+            <div class="mb-1">
+              <label for="cardset_id" class="form-label">卡片所属卡片集</label>
+              <select class="form-select" id="cardset_id" name="cardset_id">
+                <!-- 这里应该动态填充卡片集选项 -->
+              </select>
+            </div>
+            
+            <!-- 提交按钮 -->
+            <button type="submit" class="btn btn-primary" id="createFlashCard">提交</button>
+          </form>
+        </div>
+      </div>
+    <script src="flashcardcreate.js">
+    </script>
+</body>
+</html>

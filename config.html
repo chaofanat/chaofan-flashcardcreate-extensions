@@ -1,0 +1,48 @@
+<!-- config.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闪卡服务配置</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 样式 */
+        body {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        input, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <h1>闪卡服务配置</h1>
+        <div class="alert alert-info" role="alert">
+            请输入您的闪卡服务 API 地址，以及您的用户名和密码。此插件配置为项目 <a href="https://github.com/chaofanat/chaofanonline" target="_blank">https://github.com/chaofanat/chaofanonline</a> 下的闪卡学习系统进行服务。
+        </div>
+        <form id="configForm">
+            <div class="mb-3">
+                <label for="apibaseurl" class="form-label">API base地址:</label>
+                <input type="text" class="form-control" id="apibaseurl" name="apibaseurl" value="http://127.0.0.1:8080">
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">用户名:</label>
+                <input type="text" class="form-control" id="username" name="username">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">密码:</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">保存配置</button>
+        </form>
+    </div>
+
+    <script src="config.js"></script>
+</body>
+</html>
