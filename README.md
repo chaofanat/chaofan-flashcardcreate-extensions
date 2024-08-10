@@ -1,0 +1,2 @@
+# chaofan-flashcardcreate-extensions
+为chaofan.online的flashcard app设计的快速生成闪卡的浏览器插件
