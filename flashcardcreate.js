@@ -1,13 +1,3 @@
-
-
-
-
-
-// var baseurl = "http://www.chaofan.onli";
-// //后续应从localstorage中获取
-// var username = "SUPERVISOR";
-// var password = "4416081";
-
 const data = chrome.storage.sync.get(['apibaseurl', 'username', 'password']);
 data.then((data) => {
   //####################################################### 常量定义 ######################################################
